@@ -64,7 +64,7 @@ export default function Page() {
     inventory: [] as Array<RefObject<VariableSizeGrid>>,
   });
 
-  // Optimize scroll handler
+  // Optimize scroll handler for horizontal scrolling
   const handleScroll = useCallback(({ scrollLeft }: { scrollLeft: number }) => {
     const { calenderMonths, calenderDates, inventory } = scrollRefs.current;
 
