@@ -416,6 +416,24 @@ export default function Page() {
               <Typography color="gray">Loading more...</Typography>
             </Box>
           )}
+
+          {/* If no more data left  */}
+          {!room_calendar.hasNextPage &&
+            room_calendar.isSuccess &&
+            room_calendar.data.pages.length === 0 && (
+              <Box
+                sx={{
+                  py: 4,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  gap: 2,
+                }}
+              >
+                <Typography color="gray">No data available</Typography>
+              </Box>
+            )}
         </Card>
       </Box>
       <Box
